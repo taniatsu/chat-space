@@ -1,3 +1,5 @@
+$white-color : #ffffff;
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +10,7 @@
 
 .side-bar {
   width: 300px;
-  color: white;
+  color: $white-color;
 
   &__user-name {
     background-color: #253141;
@@ -40,7 +42,7 @@
       }
     
       &__btn {
-        color: #ffffff;
+        color: $white-color;
         text-decoration: none;
         &--cog {
             margin-left: 5px;
@@ -79,7 +81,7 @@
   width: calc(100vw - 300px);
 
   &__group-info {
-    background-color: #ffffff;
+    background-color: $white-color;
     width: 100%;
     height: 100px;
     padding: 0 40px;
@@ -159,7 +161,7 @@
     align-items: center;
 
     .message-form {
-      background-color: #ffffff;
+      background-color: $white-color;
       width: 950px;
       height: 50px;
       position: relative;
@@ -195,7 +197,7 @@
         margin-left: 15px;
         text-align: center;
         line-height: 50px;
-        color: #ffffff;
+        color: $white-color;
         display: block;
         cursor: pointer;
         }
