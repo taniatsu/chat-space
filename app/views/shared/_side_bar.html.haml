@@ -1,0 +1,19 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        = current_user.name
+      .top-items__icons
+        = link_to new_group_path, class: "top-items__btn" do
+          = icon('fas', 'edit', class: "top-items__btn--edit")
+        = link_to edit_user_path(current_user), class: "top-items__btn" do
+          = icon('fas', 'cog', class: "top-items__btn--cog")
+          
+  .side-bar__group-list
+    - current_user.groups.each do |group|
+      .group-list__index
+        = link_to '#' do
+          .group-list__index--name
+            = group.group_name
+          .group-list__index--member
+            メッセージはまだありません。

@@ -1,0 +1,46 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info--name
+      ABCグループ
+    .chat-main__group-info--member
+      mambers:あつし、ゆうき、しょうご
+    = link_to "#", class: "chat-main__group-info--btn" do
+      Edit
+
+  .chat-main__message-list
+    .message-list__index
+      .message-list__index__top
+        .message-list__index__top--name
+          あつし
+        .message-list__index__top--date-time
+          2019/12/14(sat)12:00:00
+      .message-list__index__message
+        あいうえお
+
+    .message-list__index
+      .message-list__index__top
+        .message-list__index__top--name
+          あつし
+        .message-list__index__top--date-time
+          2019/12/14(sat)12:00:00
+      .message-list__index__message
+        かきくけこ
+
+    .message-list__index
+      .message-list__index__top
+        .message-list__index__top--name
+          あつし
+        .message-list__index__top--date-time
+          2019/12/14(sat)12:00:00
+      .message-list__index__message
+        さしすせそ
+
+  .chat-main__message-form
+    .message-form
+      %form.message-form__top
+        %input{type: "text", placeholder: "type a message", class: "message-form__top--input"}
+        %label{class: "message-form__top--icon"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "message-form__top--file"}
+
+    %input{type: "submit", value: "Send", class: "message-form__btn"}
