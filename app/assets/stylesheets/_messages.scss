@@ -62,12 +62,18 @@ $white-color : #ffffff;
       height: 91px;
       padding: 20px 0 40px;
 
+      &--btn {
+        text-decoration: none;
+      }
+
       &--name {
+        color: $white-color;
         font-size: 15px;
         line-height: 15px;
       }
 
       &--member {
+        color: $white-color;
         font-size: 11px;
         line-height: 11px;
         margin-top: 5px;
