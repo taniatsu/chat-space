@@ -90,16 +90,17 @@ $white-color : #ffffff;
     background-color: $white-color;
     width: 100%;
     height: 100px;
-    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     position: relative;
     
     &--name {
+      width: 100%;
       font-size: 20px;
       color: #333333;
-      position: absolute;
-      top: 35px;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
     }
 
     &--member {
@@ -108,9 +109,9 @@ $white-color : #ffffff;
       font-size: 12px;
       position: absolute;
       bottom: 0;
+      padding-left: 40px;
     }
     
-
     &--btn {
       color: #38aef0;
       border: solid 1px #38aef0;
@@ -118,7 +119,6 @@ $white-color : #ffffff;
       padding: 0 20px;
       margin: 28px 0;
       text-decoration: none;
-      text-align: center;
       display: block;
       position: absolute;
       right: 40px;
@@ -128,7 +128,7 @@ $white-color : #ffffff;
 
   &__message-list {
     background-color: #fafafa;
-    width: 100%;
+    width: calc(100vw - 300px);
     height: calc(100vh - 190px);
     padding: 0 40px;
 
@@ -161,11 +161,14 @@ $white-color : #ffffff;
 
   &__message-form {
     background-color: #d2d2d2;
-    width: 100%;
+    width: calc(100vw - 300px);
     height: 90px;
     padding: 0 40px;
     display: flex;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 
     .message-form {
       background-color: $white-color;
