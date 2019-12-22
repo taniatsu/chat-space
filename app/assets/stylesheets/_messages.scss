@@ -61,7 +61,6 @@ $white-color : #ffffff;
     overflow: scroll;
 
     .group-list__index {
-      // height: 91px;
       padding: 20px 0 40px;
 
       &--btn {
@@ -88,7 +87,6 @@ $white-color : #ffffff;
 .chat-main {
   width: calc(100vw - 300px);
   height: 100vh;
-  overflow: scroll;
 
   &__group-info {
     background-color: $white-color;
@@ -97,8 +95,6 @@ $white-color : #ffffff;
     display: flex;
     justify-content: space-between;
     position: relative;
-    position: fixed;
-    top: 0;
     
     &--name {
       width: 100%;
@@ -135,15 +131,13 @@ $white-color : #ffffff;
   &__message-list {
     background-color: #f3f3f3;
     width: calc(100vw - 300px);
-    height: calc(100vh - 70px);
+    height: calc(100vh - 190px);
     padding: 0 40px;
     overflow: scroll;
     
     .message-list__index {
       width: 100%;
-      padding: 35px 0 46px;
-      // background-color: #fafafa;
-      
+      padding: 35px 0 46px;      
 
       &__top {
         display: flex;
