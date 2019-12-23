@@ -2,42 +2,37 @@ $(function(){
     function buildHTML(message){
       if ( message.image ) {
         var html =
-          `<chat-main__message-list>
-            <div class="message-list__index">
-              <div class="message-list__index__top">
-                <div class="message-list__index__top--name">
-                  ${message.user_name}
-                </div>
-                <div class="message-list__index__top--date-time">
-                  ${message.created_at}
-                </div>
+          `<div class="message-list__index" data-message-id=${message.id}>
+              <div class="message-list__index__top--name">
+                ${message.user_name}
               </div>
-              <div class="message-list__index__message">
-                <p class="lower-message__content">
-                  ${message.body}
-                </p>
+              <div class="message-list__index__top--date-time">
+                ${message.created_at}
               </div>
-              <img src=${message.image} >
             </div>
+            <div class="message-list__index__message">
+              <p class="lower-message__content">
+                ${message.body}
+              </p>
+            </div>
+            <img src=${message.image} >
           </div>`
         return html;
       } else {
         var html =
-          `<chat-main__message-list>
-            <div class="message-list__index">
-              <div class="message-list__index__top">
-                <div class="message-list__index__top--name">
-                  ${message.user_name}
-                </div>
-                <div class="message-list__index__top--date-time">
-                  ${message.created_at}
-                </div>
+          `<div class="message-list__index" data-message-id=${message.id}>
+            <div class="message-list__index__top">
+              <div class="message-list__index__top--name">
+                ${message.user_name}
               </div>
-              <div class="message-list__index__message">
-                <p class="lower-message__content">
-                  ${message.body}
-                </p>
+              <div class="message-list__index__top--date-time">
+                ${message.created_at}
               </div>
+            </div>
+            <div class="message-list__index__message">
+              <p class="lower-message__content">
+                ${message.body}
+              </p>
             </div>
           </div>`
         return html;
