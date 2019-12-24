@@ -2,7 +2,7 @@ $(function(){
   
     function buildHTML(message){
 
-      if ( message.image ) {
+      if ( message.body && message.image ) {
         var html =
           `<div class="message-list__index" data-message-id=${message.id}>
               <div class="message-list__index__top--name">
@@ -21,7 +21,7 @@ $(function(){
           </div>`
         return html;
 
-      } else {
+      } else if ( message.body ) {
         var html =
           `<div class="message-list__index" data-message-id=${message.id}>
             <div class="message-list__index__top">
@@ -37,6 +37,20 @@ $(function(){
                 ${message.body}
               </p>
             </div>
+          </div>`
+        return html;
+
+      } else if (message.image) {
+        var html =
+          `<div class="message-list__index" data-message-id=${message.id}>
+              <div class="message-list__index__top--name">
+                ${message.user_name}
+              </div>
+              <div class="message-list__index__top--date-time">
+                ${message.created_at}
+              </div>
+            </div>
+            <img src=${message.image} >
           </div>`
         return html;
       };
