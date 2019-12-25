@@ -168,8 +168,6 @@ $white-color : #ffffff;
     padding: 0 40px;
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom: 0;
 
     .message-form {
       background-color: $white-color;
@@ -181,6 +179,7 @@ $white-color : #ffffff;
         height: 50px;
       width: calc(100vw - 500px);
         padding-left: 10px;
+        padding-right: 50px;
         border: none;
       }
       
