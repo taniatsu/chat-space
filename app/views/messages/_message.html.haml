@@ -3,7 +3,7 @@
     .message-list__index__top--name
       = message.user.name
     .message-list__index__top--date-time
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      = message.created_at.strftime("%Y/%m/%d(%a) %H:%M:%S")
   .message-list__index__message
     - if message.body.present?
       %p.lower-message__content
