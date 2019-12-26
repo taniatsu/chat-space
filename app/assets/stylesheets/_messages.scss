@@ -95,6 +95,8 @@ $white-color : #ffffff;
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding-right: 120px;
+    
     
     &--name {
       width: 100%;
@@ -179,7 +181,7 @@ $white-color : #ffffff;
         height: 50px;
       width: calc(100vw - 500px);
         padding-left: 10px;
-        padding-right: 50px;
+        padding-right: 35px;
         border: none;
       }
       
